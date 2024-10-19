@@ -14,6 +14,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 /* ROUTES */
+app.get('/',(req,res)=>{
+  res.send("Welcome to the Estate App")
+})
 app.use("/auth", authRoutes)
 app.use("/properties", listingRoutes)
 app.use("/bookings", bookingRoutes)
